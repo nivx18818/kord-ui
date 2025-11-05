@@ -119,7 +119,7 @@ Use these tools to query the latest documentation for packages and components:
 - **Install with Natural Language** - Add components using simple conversational prompts like "add a login form".
 - **Support for Multiple Registries** - Access public registries, private company libraries, and third-party sources.
 
-### `context7`
+### `upstash/context7`
 
 - Latest docs about popular packages.
 
