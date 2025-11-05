@@ -91,6 +91,38 @@ Guidance for GitHub Copilot when assisting with the Kord frontend (Next.js-based
 - Build: `npm run build` for production.
 - Reference `docs/frontend-guide.md` for integration patterns (auth setup, API clients, real-time).
 
+## AI Tools and Resources
+
+Use these tools to query the latest documentation for packages and components:
+
+### `next-devtools`
+
+- **Application Runtime Access**
+
+  - **Error Detection**: Retrieve current build errors, runtime errors, and type errors from your dev server.
+  - **Live State Queries**: Access real-time application state and runtime information.
+  - **Page Metadata**: Query page routes, components, and rendering details.
+  - **Server Actions**: Inspect Server Actions and component hierarchies.
+  - **Development Logs**: Access development server logs and console output.
+
+- **Development Tools**
+
+  - **Next.js Knowledge Base**: Query comprehensive Next.js documentation and best practices.
+  - **Migration and Upgrade Tools**: Automated helpers for upgrading to Next.js 16 with codemods.
+  - **Cache Components Guide**: Setup and configuration assistance for Cache Components.
+  - **Browser Testing**: Playwright MCP integration for verifying pages in the browser.
+
+### `shadcn`
+
+- **Browse Components** - List all available components, blocks, and templates from any configured registry.
+- **Search Across Registries** - Find specific components by name or functionality across multiple sources.
+- **Install with Natural Language** - Add components using simple conversational prompts like "add a login form".
+- **Support for Multiple Registries** - Access public registries, private company libraries, and third-party sources.
+
+### `context7`
+
+- Latest docs about popular packages.
+
 ## Conventions & Tips
 
 - Think before you code: prefer to propose a small plan and then implement incrementally.
