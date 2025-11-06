@@ -46,7 +46,7 @@ Follow Next.js App Router conventions and align with frontend architecture.
 
 - Standardize error handling.
 
-- Follow Next.js conventions.
+- Follow Next.js and Tailwind CSS conventions in `.github/instructions/`.
 
 ### Integration
 
