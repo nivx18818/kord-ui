@@ -17,12 +17,12 @@ These are broken into phases. Focus on one phase at a time for simplicity. Each 
 ### Phase 0: Initial Setup
 
 - [x] Create Next.js project: `npx create-next-app@latest .`.
-- [ ] Install dependencies: `npm install axios socket.io-client @tanstack/react-query zustand react-hook-form zod framer-motion react-window`.
-- [ ] Init shadcn/ui: `npx shadcn-ui@latest init`.
-- [ ] Add shadcn components: Button, Input, Modal, etc. via `npx shadcn-ui@latest add <component>`.
-- [ ] Setup Tailwind: Configure in `tailwind.config.js` for shadcn compatibility.
-- [ ] Create `.env.local`: Set `NEXT_PUBLIC_API_URL=http://localhost:3001/api/v1`, `NEXT_PUBLIC_WS_URL=http://localhost:3001`.
-- [ ] Types: Create `lib/types/index.ts` mirroring backend entities (User, Server, Channel, Message, etc.) from `docs/api/*`.
+- [x] Install dependencies: `npm install axios socket.io-client @tanstack/react-query zustand react-hook-form zod framer-motion react-window`.
+- [x] Init shadcn/ui: `npx shadcn-ui@latest init`.
+- [x] Add shadcn components: Button, Input, Modal, etc. via `npx shadcn-ui@latest add <component>`.
+- [x] Setup Tailwind: Configure in `tailwind.config.js` for shadcn compatibility.
+- [x] Create `.env.local`: Set `NEXT_PUBLIC_API_URL=http://localhost:3001/api/v1`, `NEXT_PUBLIC_WS_URL=http://localhost:3001`.
+- [x] Types: Create `lib/types/index.ts` mirroring backend entities (User, Server, Channel, Message, etc.) from `docs/api/*`.
 
 ### Phase 1: Authentication
 
