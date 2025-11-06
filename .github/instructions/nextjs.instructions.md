@@ -85,7 +85,10 @@ Always move client-only UI into a Client Component and import it directly in you
   - For multiple related components, use an `index.ts` barrel file.
 - **Component Location:**
   - Place shared components in `components/`.
-  - Place route-specific components inside the relevant route folder.
+  - Place route-specific components inside the relevant route folder using `_components/` (e.g., `app/(main)/channels/[serverId]/_components/`).
+  - Always use an `index.tsx` file inside a component folder (e.g., `components/sidebar/index.tsx`).
+  - For child components within a parent component, structure as nested folders (e.g., `_components/form/input/index.tsx` for an Input child inside a Form component, with `_components/form/index.tsx` for the parent).
+  - Organize components in `src/components` into appropriate subfolders by feature or type (e.g., `src/components/ui/`, `src/components/forms/`, `src/components/chat/`).
 - **Props:**
   - Use TypeScript interfaces for props.
   - Prefer explicit prop types and default values.

@@ -45,6 +45,46 @@ Guidance for GitHub Copilot when assisting with the Kord frontend (Next.js-based
 - UI components in `components/` (shadcn/ui primitives, custom like MessageList, ServerSidebar).
 - Types in `lib/types/` mirroring backend entities/DTOs for type safety.
 
+## Folder Structure
+
+```ini
+kord-ui/
+├── src/
+│   ├── app/                      # Next.js App Router root
+│   │   ├── layout.tsx            # Root layout with providers (QueryClient, Zustand)
+│   │   ├── (auth)/               # Route group for auth pages
+│   │   │   ├── layout.tsx        # Auth layout (e.g., centered, no sidebar)
+│   │   │   ├── login/
+│   │   │   │   └── page.tsx      # Login page
+│   │   │   └── register/
+│   │   │       └── page.tsx      # Register page
+│   │   └── (main)/               # Route group for main app
+│   │       ├── layout.tsx        # Main layout with server sidebar
+│   │       └── channels/
+│   │           ├── @me/
+│   │           │   ├── page.tsx  # DM list page
+│   │           │   └── [dmId]/
+│   │           │       └── page.tsx  # Specific DM page
+│   │           └── [serverId]/
+│   │               ├── layout.tsx    # Server layout with channel sidebar
+│   │               └── [channelId]/
+│   │                   └── page.tsx  # Server channel page
+│   ├── components/               # Reusable UI components (shadcn/ui + custom)
+│   │   ├── shadcn/                   # shadcn/ui primitives
+│   │   └── ...
+│   ├── lib/                      # Shared utilities
+│   │   ├── api/                  # API clients (auth.ts, servers.ts, etc.)
+│   │   ├── types/                # TypeScript types (mirroring backend)
+│   │   ├── stores/               # Zustand stores (authStore, serverStore, etc.)
+│   │   ├── services/             # WebSocket, etc.
+│   │   └── utils/                # Helpers (validation, etc.)
+│   ├── hooks/                    # Custom React hooks
+│   └── styles/                   # Global styles (globals.css)
+├── public/                       # Static assets
+├── docs/                         # Documentation (api/, frontend-guide.md)
+└── ...                           # Config files (package.json, tailwind.config.js, etc.)
+```
+
 ## Data & Fetching
 
 - Use TanStack Query for all API interactions: queries for reads (with staleTime/infinite queries), mutations for writes (with optimistic updates/rollbacks).
